@@ -142,64 +142,48 @@ html {
 .feedback-form {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px; /* Növeltük a távolságot */
+  align-items: flex-start; /* Igazítás a bal oldalra */
 }
 
 .input-field {
+  width: 100%; /* Biztosítjuk, hogy az input mezők kitöltsék a szülő elem szélességét */
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 15px; /* Növeltük a távolságot a mezők között */
   border: 1px solid #ccc;
-  color: gray;
+  border-radius: 5px; /* Lekerekített sarkok */
+  font-size: 1rem;
+  color: #333;
 }
 
-.input-field option {
-  color: black;
+.input-field:focus {
+  border-color: #5a5a42; /* Kiemelés fókuszáláskor */
+  outline: none;
 }
 
-.input-field:valid {
-  color: black;
+/* Alapértelmezett 'Válassz' opció szürke stílusa */
+select option[value=""]:disabled {
+  color: #b0b0b0; /* Szürke szín */
+  font-style: italic; /* Különböző formázás, hogy még inkább jelezze, hogy nem választható */
 }
 
 .submit-button {
-  padding: 10px;
+  padding: 15px 30px; /* Nagyobb méretű gomb */
   background-color: #5a5a42;
   color: white;
   border: none;
+  border-radius: 5px; /* Lekerekített sarkok */
+  font-size: 1.2rem;
   cursor: pointer;
+  width: 100%; /* Gomb szélességének beállítása */
 }
 
 .submit-button:hover {
   background-color: #7a6f55;
 }
 
-/* Galéria szekció */
-.upload-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.file-input {
-  padding: 10px;
-  border: 1px solid #ccc;
-}
-
-.upload-button {
-  padding: 10px;
-  background-color: #5a5a42;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.upload-button:hover {
-  background-color: #7a6f55;
-}
-
-.upload-status {
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: #555;
+.submit-button:active {
+  background-color: #4e4a34; /* Színváltoztatás kattintásra */
 }
 
 /* Általános layout módosítások */
@@ -225,4 +209,20 @@ html {
   flex-grow: 1;
   margin-left: 25%;
   margin-right: 25%;
+}
+
+input[type="text"],
+select {
+  width: 100%; /* Teljes szélesség */
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px; /* Lekerekített sarkok */
+  border: 1px solid #ccc;
+  margin-bottom: 15px;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #5a5a42;
+  outline: none;
 }
