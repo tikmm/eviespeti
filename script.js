@@ -14,13 +14,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const formData = new FormData(this);
 
+    // Itt küldjük el a formot a Formspree API-nak
     fetch(this.action, {
       method: this.method,
       body: formData,
     })
       .then((response) => {
+        // Ha sikeres a válasz
         if (response.ok) {
-          // Sikeres válasz esetén a modal megjelenítése
+          // Modális ablak megjelenítése
           modal.style.display = "block";
           this.reset(); // Opció: form kiürítése sikeres beküldés után
         } else {
