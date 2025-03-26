@@ -145,7 +145,7 @@ select {
   background-color: #7a6f55;
 }
 
-/* Lábjegyzet / Lábléc stílusok */
+/* Lábléc stílusok */
 .footer {
   background-color: #d8cebf;
   padding: 20px;
@@ -153,6 +153,7 @@ select {
   width: 100%;
   position: relative;
   bottom: 0;
+  box-sizing: border-box;
 }
 
 .map-container {
@@ -162,6 +163,7 @@ select {
   height: 0;
   overflow: hidden;
   max-width: 100%;
+  margin-bottom: 20px;
 }
 
 .map-container iframe {
@@ -170,6 +172,15 @@ select {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.footer-image {
+  width: 100%; /* A kép ne lógjon ki a láblécből */
+  height: auto;
+  margin-top: 20px; /* Kis távolság a térkép alatt */
+  display: block; /* Kép középre igazítása */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Mobilbarát nézet */
