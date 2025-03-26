@@ -10,12 +10,12 @@
 body,
 html {
   font-family: "Charmonman", serif;
-  height: 100%;
   background-color: #f4efe9;
   color: #5a5a42;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  align-items: center;
+  width: 100%;
 }
 
 /* Fejléc */
@@ -27,6 +27,7 @@ html {
   z-index: 10;
   height: 150px;
   background-color: #d8cebf;
+  width: 100%;
 }
 
 .header::before {
@@ -55,217 +56,95 @@ html {
   color: #454534;
 }
 
-.header-image {
-  width: 50px;
-  height: 50px;
-}
-
 /* Fő tartalom */
-
 .main-content {
   display: flex;
-  flex: 1;
-  gap: 20px;
-  padding: 20px;
-  padding-top: 80px;
-  margin-left: 25%;
-  margin-right: 25%;
-  justify-content: space-between;
-  text-align: center;
-}
-
-/* Oldalsávok */
-.sidebar {
-  background-color: #e6e0d7;
-  padding: 20px;
-  box-shadow: none;
-  width: 25%;
-  min-height: 100vh;
-  text-align: center;
-}
-
-.left-sidebar {
-  left: 0;
-}
-
-.right-sidebar {
-  right: 0;
-}
-
-.section-title {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.sidebar-image {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 
-.sidebar-text {
-  margin-top: 10px;
+/* Egyetlen nagy fő szekció */
+.main-section {
+  background-color: #ece7e0;
+  width: 70%;
+  height: 100vh;
+  padding: 30px;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .custom-link {
-  color: rgb(91, 100, 82);
+  color: #314d34;
+  font-weight: bold;
   text-decoration: none;
+}
+
+/* Link hover állapot */
+.custom-link:hover {
+  color: #1e4d36;
+  text-decoration: underline;
   font-weight: bold;
 }
 
-.custom-link:hover {
-  text-decoration: underline;
+/* Jobb oldali oldalsáv */
+.sidebar {
+  background-color: #dcd4c5;
+  width: 30%;
+  height: 100vh;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  line-height: 1.6;
 }
 
-.program-list,
-.menu-list {
+ul {
   list-style-type: none;
-  padding: 0;
+  padding-left: 0;
 }
 
-.program-list li,
-.menu-list li {
-  margin-bottom: 10px;
-}
-
-/* Középső tartalom */
-.main {
-  flex-grow: 2;
-}
-
-.feedback-gallery {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-/* Visszajelzés szekció */
+/* Visszajelzés */
 .feedback-form {
   display: flex;
   flex-direction: column;
-  gap: 15px; /* Növeltük a távolságot */
-  align-items: flex-start; /* Igazítás a bal oldalra */
+  gap: 15px;
+  align-items: center;
 }
 
-.input-field {
-  width: 100%; /* Biztosítjuk, hogy az input mezők kitöltsék a szülő elem szélességét */
+.input-field,
+select {
+  width: 300px;
   padding: 10px;
-  margin-bottom: 15px; /* Növeltük a távolságot a mezők között */
-  border: 1px solid #ccc;
-  border-radius: 5px; /* Lekerekített sarkok */
   font-size: 1rem;
-  color: #333;
-}
-
-.input-field:focus {
-  border-color: #5a5a42; /* Kiemelés fókuszáláskor */
-  outline: none;
-}
-
-/* Alapértelmezett 'Válassz' opció szürke stílusa */
-select option[value=""]:disabled {
-  color: #b0b0b0; /* Szürke szín */
-  font-style: italic; /* Különböző formázás, hogy még inkább jelezze, hogy nem választható */
+  border: 1px solid #ccc;
 }
 
 .submit-button {
-  padding: 15px 30px; /* Nagyobb méretű gomb */
+  padding: 15px 30px;
   background-color: #5a5a42;
   color: white;
   border: none;
-  border-radius: 5px; /* Lekerekített sarkok */
   font-size: 1.2rem;
   cursor: pointer;
-  width: 100%; /* Gomb szélességének beállítása */
 }
 
 .submit-button:hover {
   background-color: #7a6f55;
 }
 
-.submit-button:active {
-  background-color: #4e4a34; /* Színváltoztatás kattintásra */
-}
-
-/* Általános layout módosítások */
-.main-content {
-  display: flex;
-  gap: 20px;
-  flex: 1;
-  padding: 20px;
-  margin-left: 25%;
-  margin-right: 25%;
-}
-
-.left-sidebar,
-.right-sidebar {
-  position: absolute;
-  top: 150px; /* A fejléc alatti pozíció */
-  height: calc(
-    100vh - 80px
-  ); /* A teljes képernyőt kitölti, figyelembe véve a fejléc magasságát */
-}
-
-.main {
-  flex-grow: 1;
-  margin-left: 25%;
-  margin-right: 25%;
-}
-
-input[type="text"],
-select {
-  width: 100%; /* Teljes szélesség */
-  padding: 10px;
-  font-size: 1rem;
-  border-radius: 5px; /* Lekerekített sarkok */
-  border: 1px solid #ccc;
-  margin-bottom: 15px;
-}
-
-input[type="text"]:focus,
-select:focus {
-  border-color: #5a5a42;
-  outline: none;
-}
-
 /* Mobilbarát nézet */
 @media (max-width: 768px) {
-  .header {
-    height: 80px;
-    padding: 5px;
+  .main-content {
+    flex-direction: column;
   }
 
-  .header-title {
-    font-size: 1.5rem;
-  }
-
-  @media (max-width: 768px) {
-    .main-content {
-      margin-left: 0;
-      margin-right: 0;
-      padding: 10px;
-    }
-
-    .main {
-      margin-left: 0;
-      margin-right: 0;
-      width: 100%;
-    }
-  }
-
-  .left-sidebar,
-  .right-sidebar {
-    position: static;
+  .main-section,
+  .sidebar {
     width: 100%;
-    min-height: auto;
+    height: auto;
   }
 
-  body {
-    word-wrap: break-word;
-    overflow-x: hidden;
-  }
-
-  .input-field {
-    max-width: 100%;
+  .sidebar {
+    font-size: 1.1rem; /* Mobilon kisebb betűméret */
   }
 }

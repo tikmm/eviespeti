@@ -6,83 +6,81 @@
     <title>Evi és Peti 🔐</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body class="container">
+  <body>
     <!-- Fejléc -->
     <header class="header">
       <h1 class="header-title">Evelin és Péter</h1>
-      <p class="section-title">esküvője</p>
+      <h2 class="section-title">esküvője</h2>
     </header>
 
     <!-- Fő tartalom -->
     <div class="main-content">
-      <!-- Bal oldalsáv -->
-      <aside class="sidebar left-sidebar">
-        <p class="section-title">Szeretettel várunk</p>
-        <p class="sidebar-text">2025. Augusztus 30-án<br />szombaton</p>
-        <a
-          href="https://www.google.com/maps/place/Szelcepuszta+Huts+-+Hunting+Lodge/@48.5188965,20.6031353,17z/data=!3m1!4b1!4m6!3m5!1s0x473fa087569e4283:0x198eaaf8bde1f6de!8m2!3d48.518893!4d20.6057102!16s%2Fg%2F11g6wz6n3m?entry=ttu&g_ep=EgoyMDI1MDMyMy4wIKXMDSoASAFQAw%3D%3D"
-          class="custom-link"
-          target="_blank"
-          title="Kattints a térképhez!"
-        >
-          <strong>a Szelecpuszta Turistaházban</strong>
-        </a>
+      <!-- Egyetlen fő szekció -->
+      <section class="main-section">
+        <h2 class="section-title">
+          Szeretettel várunk 2025. Augusztus 30-án, szombaton <br />
+          <a
+            href="https://www.google.com/maps/place/Szelcepuszta+Huts+-+Hunting+Lodge/@48.518893,20.6031353,17z/data=!3m1!4b1!4m6!3m5!1s0x473fa087569e4283:0x198eaaf8bde1f6de!8m2!3d48.518893!4d20.6057102!16s%2Fg%2F11g6wz6n3m?entry=ttu&g_ep=EgoyMDI1MDMyMy4wIKXMDSoASAFQAw%3D%3D"
+            class="custom-link"
+            target="_blank"
+            title="Kattints a térképhez"
+          >
+            <strong>a Szelecpuszta Turistaházban</strong>
+          </a>
+        </h2>
         <br /><br />
-        <img src="evipeti.png" alt="EviPeti" class="sidebar-image" />
-        <p class="sidebar-text">árvíztűrő tükörfúrógép</p>
-        <p class="sidebar-text">ÁRVÍZTŰRŐ TÜKÖRFÚRÓGÉP</p>
-      </aside>
 
-      <!-- Középső tartalom -->
-      <main class="main">
-        <div class="feedback-gallery">
-          <!-- Visszajelzés szekció -->
-          <section id="rsvp" class="feedback">
-            <h2 class="section-title">Visszajelzés</h2>
-            <p>Kérjük részvételi visszajelzéseteket Április 30-ig</p>
-            <br />
-            <form action="https://formspree.io/f/mldjlkvj" method="POST">
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                placeholder="Név"
-              /><br />
-              <select name="attendance" id="attendance" required>
-                <option value="" disabled selected>Válassz</option>
-                <option value="Ott leszek">Ott leszek! 💃🏼</option>
-                <option value="Ott leszek és viszem a páromat is">
-                  Ott leszek és viszem a páromat is! 👩🏻‍❤️‍👨🏻
-                </option>
-                <option value="Nem tudok ott lenni">
-                  Sajnos nem tudok ott lenni 😔
-                </option>
-              </select>
+        <!-- Visszajelzés form -->
+        <h3>Kérjük részvételi visszajelzéseteket Április 30-ig</h3>
+        <br />
+        <form
+          action="https://formspree.io/f/mldjlkvj"
+          method="POST"
+          class="feedback-form"
+        >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Név"
+            class="input-field"
+          />
+          <select
+            name="attendance"
+            id="attendance"
+            required
+            class="input-field"
+          >
+            <option value="" disabled selected>Válassz</option>
+            <option value="Ott leszek">Ott leszek! 💃🏼</option>
+            <option value="Ott leszek és viszem a páromat is">
+              Ott leszek és viszem a páromat is! 👩🏻‍❤️‍👨🏻
+            </option>
+            <option value="Nem tudok ott lenni">
+              Sajnos nem tudok ott lenni 😔
+            </option>
+          </select>
+          <button class="submit-button" type="submit">Küldés</button>
+        </form>
+      </section>
 
-              <button class="submit-button" type="submit">Küldés</button>
-            </form>
-          </section>
-          <br />
-        </div>
-      </main>
-
-      <!-- Jobb oldalsáv: Program és menü -->
-      <aside class="sidebar right-sidebar">
+      <!-- Jobb oldali oldalsáv (program és menü) -->
+      <section class="sidebar">
         <h2 class="section-title">Program</h2>
-        <ul class="program-list">
+        <ul>
           <li><strong>15:00</strong> - Szertartás</li>
           <li><strong>18:00</strong> - Vacsora</li>
           <li><strong>20:00</strong> - Buli</li>
         </ul>
+        <br /><br />
         <h3 class="section-title">Menü</h3>
-        <ul class="menu-list">
+        <ul>
           <li>Hami nyami</li>
           <li>Finom kaja</li>
           <li>Setemény</li>
         </ul>
-        <img src="kicsi.png" alt="Igen" class="sidebar-image" />
-      </aside>
+      </section>
     </div>
   </body>
 </html>
