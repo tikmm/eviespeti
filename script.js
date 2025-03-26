@@ -14,33 +14,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const formData = new FormData(this);
 
-    // Kérjük, győződj meg arról, hogy az action URL helyes és a megfelelő Formspree URL-t tartalmazza
-    console.log("Form action URL:", this.action);
-
     fetch(this.action, {
-      method: "POST", // POST metódus
+      method: this.method,
       body: formData,
     })
       .then((response) => {
-        console.log("Response:", response); // A válasz naplózása
         if (response.ok) {
-          // Modális ablak megjelenítése
+          // Sikeres válasz esetén a modal megjelenítése
           modal.style.display = "block";
           this.reset(); // Opció: form kiürítése sikeres beküldés után
-
-          // Automatikusan bezárja a modal-t 3 másodperc után
-          setTimeout(() => {
-            modal.style.display = "none";
-          }, 3000);
         } else {
-          return response.text().then((text) => {
-            throw new Error(text); // Ha nem ok, hibát dobunk
-          });
+          alert("Hiba történt, próbáld újra.");
         }
       })
       .catch((error) => {
-        console.error("Hiba:", error); // Hibák részletes naplózása
-        alert("Hiba történt, próbáld újra. Részletek: " + error.message);
+        console.error("Hiba:", error);
+        alert("Hiba történt, próbáld újra.");
       });
   });
 
@@ -49,7 +38,7 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.style.display = "none";
   });
 
-  // Ha a felhasználó a modal külsejére kattint, zárja be
+  // A modal bezárása akkor is, ha bárhol máshol kattintanak
   window.addEventListener("click", function (event) {
     if (event.target === modal) {
       modal.style.display = "none";
