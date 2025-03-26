@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Charmonman&display=swap");
+
+/* Alap stílusok */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-family: "Charmonman", serif;
+  height: 100%;
+  background-color: #f4efe9;
+  color: #5a5a42;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Fejléc */
+.header {
+  position: relative;
+  padding: 10px;
+  text-align: center;
+  flex-shrink: 0;
+  z-index: 10;
+  height: 150px;
+  background-color: #d8cebf;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("header.png");
+  background-size: cover;
+  background-position: left;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.header .content {
+  position: relative;
+  z-index: 1;
+}
+
+.header-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #454534;
+}
+
+.header-image {
+  width: 50px;
+  height: 50px;
+}
+
+/* Fő tartalom */
+
+.main-content {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+  padding: 20px;
+  padding-top: 80px;
+  margin-left: 25%;
+  margin-right: 25%;
+  justify-content: space-between;
+}
+
+/* Oldalsávok */
+.sidebar {
+  background-color: #e6e0d7;
+  padding: 20px;
+  box-shadow: none;
+  width: 25%;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.left-sidebar {
+  left: 0;
+}
+
+.right-sidebar {
+  right: 0;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.sidebar-image {
+  width: 100%;
+  height: auto;
+}
+
+.sidebar-text {
+  margin-top: 10px;
+}
+
+.custom-link {
+  color: rgb(91, 100, 82);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.custom-link:hover {
+  text-decoration: underline;
+}
+
+.program-list,
+.menu-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.program-list li,
+.menu-list li {
+  margin-bottom: 10px;
+}
+
+/* Középső tartalom */
+.main {
+  flex-grow: 2;
+}
+
+.feedback-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Visszajelzés szekció */
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-field {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  color: gray;
+}
+
+.input-field option {
+  color: black;
+}
+
+.input-field:valid {
+  color: black;
+}
+
+.submit-button {
+  padding: 10px;
+  background-color: #5a5a42;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #7a6f55;
+}
+
+/* Galéria szekció */
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.file-input {
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.upload-button {
+  padding: 10px;
+  background-color: #5a5a42;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.upload-button:hover {
+  background-color: #7a6f55;
+}
+
+.upload-status {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Általános layout módosítások */
+.main-content {
+  display: flex;
+  gap: 20px;
+  flex: 1;
+  padding: 20px;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.left-sidebar,
+.right-sidebar {
+  position: absolute;
+  top: 150px; /* A fejléc alatti pozíció */
+  height: calc(
+    100vh - 80px
+  ); /* A teljes képernyőt kitölti, figyelembe véve a fejléc magasságát */
+}
+
+.main {
+  flex-grow: 1;
+  margin-left: 25%;
+  margin-right: 25%;
+}
