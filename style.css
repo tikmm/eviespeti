@@ -231,7 +231,7 @@ select:focus {
 /* Mobilbarát nézet */
 @media (max-width: 768px) {
   .header {
-    height: 100px;
+    height: 80px;
     padding: 5px;
   }
 
@@ -239,28 +239,33 @@ select:focus {
     font-size: 1.5rem;
   }
 
-  .main-content {
-    flex-direction: column;
-    width: 100%;
-    padding: 10px;
+  @media (max-width: 768px) {
+    .main-content {
+      margin-left: 0;
+      margin-right: 0;
+      padding: 10px;
+    }
+
+    .main {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;
+    }
   }
 
-  .sidebar {
+  .left-sidebar,
+  .right-sidebar {
+    position: static;
     width: 100%;
     min-height: auto;
-    padding: 10px;
-    order: 2; /* Az oldalsávok kerüljenek alulra */
   }
 
-  .main {
-    width: 100%;
+  body {
+    word-wrap: break-word;
+    overflow-x: hidden;
   }
 
-  .feedback-form {
-    align-items: stretch;
-  }
-
-  .submit-button {
-    font-size: 1rem;
+  .input-field {
+    max-width: 100%;
   }
 }
