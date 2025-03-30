@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Evi és Peti 🔐</title>
+    <title>Evi és Peti ♡ ♥︎</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -46,19 +46,29 @@
             id="attendance"
             required
             class="input-field"
+            onchange="document.getElementById('guest-count-container').hidden = this.value !== 'Ott leszek'"
           >
             <option value="" disabled selected>Válassz</option>
-            <option value="Ott leszek">Ott leszek! 💃🏼</option>
-            <option value="Ott leszek és viszem a páromat is">
-              Ott leszek és viszem a páromat is! 👩🏻‍❤️‍👨🏻
-            </option>
+            <option value="Ott leszek">Ott leszek!</option>
             <option value="Nem tudok ott lenni">
               Sajnos nem tudok ott lenni 😔
             </option>
           </select>
+          <div id="guest-count-container" hidden>
+            <label for="guest-count">Összesen hányan JÖTTÖK? <br /></label>
+            <input
+              type="number"
+              id="guest-count"
+              name="guest_count"
+              min="1"
+              max="6"
+              class="input-field"
+            />
+          </div>
           <button class="submit-button" type="submit">Küldés</button>
         </form>
         <br /><br />
+
         <div hidden>
           <h2 class="section-title">Galéria</h2>
           <p>Oszd meg velünk az esküvőn készített képeket!</p>
@@ -90,6 +100,7 @@
     <!-- Lábjegyzet / Lábléc -->
     <footer class="footer">
       <h3>Helyszín :</h3>
+      <p>Be kell hajtani a tilosba!</p>
       <div class="map-container">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.7481208164704!2d20.605710199999997!3d48.518893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473fa087569e4283%3A0x198eaaf8bde1f6de!2sSzelcepuszta%20Huts%20-%20Hunting%20Lodge!5e0!3m2!1sen!2shu!4v1743024089567!5m2!1sen!2shu"
