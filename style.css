@@ -1,12 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Charmonman&family=Lora&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Charmonman&display=swap");
-
-p,
-li {
-  font-family: "Lora", serif;
-  font-size: 1rem;
-}
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap");
 
 /* Alap stílusok */
 * {
@@ -17,7 +11,7 @@ li {
 
 html,
 body {
-  font-family: "Parisienne", serif;
+  font-family: "Lora", serif;
   background-color: #f4efe9;
   color: #5a5a42;
   width: 100%;
@@ -26,16 +20,28 @@ body {
   flex-direction: column;
   font-size: 1.2rem;
   line-height: 1.6;
+  list-style-type: none;
+}
+
+p,
+li {
+  font-family: "Merriweather", serif;
+  font-size: 1rem;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Fejléc */
 .header {
   position: relative;
-  padding: 30px;
+  padding: 40px;
   text-align: center;
   flex-shrink: 0;
   z-index: 10;
-  height: 150px;
   background-color: #d8cebf;
   width: 100%;
   margin-bottom: 0;
@@ -48,11 +54,11 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("header.png");
+  background-image: url("asd2.png");
   background-size: cover;
-  background-position: left;
-  background-repeat: no-repeat;
-  opacity: 0.3;
+  background-position: center;
+  background-repeat: repeat-x;
+  opacity: 0.1;
   z-index: -1;
 }
 
@@ -60,6 +66,31 @@ body {
   font-size: 2.5rem;
   font-weight: bold;
   color: #454534;
+  font-family: "Parisienne", serif;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+.header h1,
+.header h2 {
+  margin: 0;
+}
+
+.header h2 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+
+.menu {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  margin-top: 30px;
+  font-family: "Merriweather", serif;
+  font-weight: bolder;
+  color: #272720;
+  font-size: 0.8rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Fő tartalom */
@@ -74,7 +105,7 @@ body {
 .main-section {
   background-color: #ece7e0;
   width: 70%;
-  padding: 30px;
+  padding: 40px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -82,30 +113,16 @@ body {
 }
 
 .section-title {
-  font-size: 1.4rem;
-  font-family: "Lora", serif;
-}
-
-.custom-link {
-  color: #394d31;
-  font-weight: bold;
-  text-decoration: underline; /* Aláhúzott a link */
-  transition: color 0.3s ease, text-decoration-color 0.3s ease; /* Simább hover effektek */
-}
-
-.custom-link:hover {
-  color: #1a351e;
-  font-weight: bold;
-  text-decoration: underline;
-  text-decoration-color: #1a351e; /* Hover állapotban a szín is változik */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Árszín árnyék, hogy jobban kiemelkedjen */
+  font-size: 1.3rem;
+  font-family: "Merriweather", serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Jobb oldali oldalsáv */
 .sidebar {
   background-color: #dcd4c5;
   width: 30%;
-  padding: 20px;
+  padding: 60px;
   text-align: center;
   font-size: 1.2rem;
   line-height: 1.6;
@@ -115,16 +132,11 @@ body {
   align-items: center;
 }
 
-/* Lista */
-ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
 .sidebar-title {
   font-size: 2.2rem;
   font-family: "Parisienne", serif;
   font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* Kép a fő tartalom bal oldalán */
@@ -164,7 +176,7 @@ select {
   background-color: #7a6f55;
 }
 
-/* Lábléc stílusok */
+/* Lábléc */
 .footer {
   background-color: #d8cebf;
   padding: 20px;
@@ -194,10 +206,10 @@ select {
 }
 
 .footer-image {
-  width: 100%; /* A kép ne lógjon ki a láblécből */
+  width: 100%;
   height: auto;
-  margin-top: 20px; /* Kis távolság a térkép alatt */
-  display: block; /* Kép középre igazítása */
+  margin-top: 20px;
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }

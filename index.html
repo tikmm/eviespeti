@@ -5,14 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Evi és Peti ♡ ♥︎</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Fejléc -->
     <header class="header">
       <h1 class="header-title">Evelin és Péter</h1>
-      <p style="font-weight: bold">
-        <strong>esküvője</strong>
-      </p>
+      <p>esküvője</p>
+      <div class="menu">
+        <a href="#program">Program</a>
+        <a href="#menu">Menü</a>
+        <a href="#footer">Helyszín</a>
+        <a href="#galeria">Galéria</a>
+      </div>
     </header>
 
     <!-- Fő tartalom -->
@@ -72,7 +80,7 @@
         </form>
         <br /><br />
 
-        <div>
+        <div id="galeria">
           <h2 class="sidebar-title">Galéria</h2>
           <br />
           <p>blablabla</p>
@@ -89,24 +97,33 @@
       <!-- Jobb oldali oldalsáv (program és menü) -->
       <section class="sidebar">
         <img src="ring.png" alt="Esküvői kép" class="side-image" />
-        <h2 class="sidebar-title">Program</h2>
-        <ul>
-          <li><strong>15:00</strong> - Szertartás</li>
-          <li><strong>18:00</strong> - Vacsora</li>
-          <li><strong>20:00</strong> - Buli</li>
-        </ul>
-        <h3 class="sidebar-title">Menü</h3>
-        <ul>
-          <li>Hami nyami</li>
-          <li>Finom kaja</li>
-          <li>Setemény</li>
-        </ul>
-        <br />
+        <div id="program">
+          <h2 class="sidebar-title">Program</h2>
+          <ul>
+            <li><strong>15:00</strong> - Szertartás</li>
+            <li><strong>18:00</strong> - Vacsora</li>
+            <li><strong>20:00</strong> - Buli</li>
+          </ul>
+        </div>
+        <img
+          src="kicsi.png"
+          alt="Esküvői kép"
+          class="side-image"
+          style="max-width: 300px"
+        />
+        <div id="menu">
+          <h3 class="sidebar-title">Menü</h3>
+          <ul>
+            <li>Hami nyami</li>
+            <li>Finom kaja</li>
+            <li>Setemény</li>
+          </ul>
+        </div>
       </section>
     </div>
 
     <!-- Lábjegyzet / Lábléc -->
-    <footer class="footer">
+    <footer class="footer" id="footer">
       <h3 class="sidebar-title">Helyszín:</h3>
       <br />
       <p>Be kell hajtani a tilosba!</p>
