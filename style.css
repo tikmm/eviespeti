@@ -229,4 +229,22 @@ select {
   .sidebar {
     font-size: 1.1rem;
   }
+  .menu {
+    display: flex;
+    flex-wrap: wrap; /* Engedélyezi az elemek több sorba rendezését */
+    gap: 10px;
+    justify-content: space-around;
+    margin-top: 30px;
+    font-family: "Merriweather", serif;
+    font-weight: bolder;
+    color: #272720;
+    font-size: 1rem; /* Növeli a betűméretet, hogy jobban illeszkedjen */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Menüelemek egyedi stílusozása, hogy megfelelően elférjenek a két oszlopban */
+  .menu > a {
+    width: 45%; /* Az elemek szélessége 45%-ra csökkentve, így elférnek két oszlopban */
+    text-align: center;
+  }
 }
