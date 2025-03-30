@@ -98,6 +98,7 @@ a {
   margin: 0;
   padding: 0%;
   font-family: "Merriweather", serif;
+  font-weight: lighter;
   line-height: 1;
   margin-top: -5px;
   animation: fadeIn 0.7s ease-out forwards;
@@ -175,6 +176,19 @@ a {
   margin-bottom: 0;
 }
 
+#galeria {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Két oszlop */
+  gap: 20px; /* Egyenletes térköz mindkét irányban */
+  justify-items: center; /* Képek középre igazítása */
+  text-align: center;
+  padding: 20px;
+}
+.side-image {
+  width: 100%; /* Képek szépen kitöltik az oszlopokat */
+  max-width: 400px;
+}
+
 .section-title {
   font-size: 1.3rem;
   font-family: "Merriweather", serif;
@@ -202,6 +216,7 @@ a {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
   position: relative;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .sidebar-title::after {
@@ -236,20 +251,65 @@ select {
   width: 350px;
   padding: 10px;
   font-size: 1rem;
+  font-family: "Merriweather", serif;
   border: 1px solid #ccc;
+  background-color: #f4f3f1;
+  color: #5a5a42;
+}
+
+.input-field:focus,
+select:focus {
+  border-color: #5a5a42;
+  background-color: #f4f3f1;
+  outline: none;
+}
+
+.input-field:active,
+select:active,
+.input-field:focus:not(:placeholder-shown),
+select:focus:not(:placeholder-shown) {
+  background-color: #f4f3f1;
 }
 
 .submit-button {
-  padding: 15px 30px;
-  background-color: #5a5a42;
+  padding: 12px 24px;
+  background: linear-gradient(145deg, #8b7f5d, #6d6948);
   color: white;
-  border: none;
-  font-size: 1.2rem;
+  border: 2px solid transparent;
+  font-size: 0.8rem;
   cursor: pointer;
+  font-family: "Merriweather", serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: background-color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .submit-button:hover {
-  background-color: #7a6f55;
+  background-color: #3e3d2d;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.submit-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(75, 74, 51, 0.5);
+  border: 2px solid #8b7f5d;
+}
+
+#galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px 20px;
+  justify-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.galeria {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
 }
 
 /* Lábléc */
@@ -290,10 +350,17 @@ select {
   margin-right: auto;
 }
 
+#mobil {
+  display: none;
+  align-self: center;
+  padding: 20px;
+  margin-bottom: 50px !important;
+}
+
 /* Mobilbarát nézet */
 @media (max-width: 768px) {
   .header {
-    padding: 40px; /* Kisebb padding mobilon */
+    padding: 40px;
   }
   .header h1 {
     font-size: 2rem;
@@ -309,17 +376,82 @@ select {
     height: auto;
   }
 
+  .input-field {
+    width: 90%;
+    height: auto;
+  }
+
   .sidebar {
     font-size: 1.1rem;
   }
+
+  .side-image {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .galeria {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+
   .menu {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+    justify-items: center;
     text-align: center;
   }
 
-  .menu > a {
-    width: 45%;
+  #galeria {
+    grid-template-columns: 1fr;
+  }
+
+  #mobil {
+    display: block !important;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  #web {
+    display: none !important;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer {
+    width: 100%;
+    padding: 20px;
     text-align: center;
+    box-sizing: border-box;
+    position: relative;
+    bottom: 0;
+    left: 0;
+  }
+  .footer-image {
+    width: 100%;
+    padding: 20px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -40px;
+  }
+  .map-container {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    max-width: 100%;
+    padding: 20px;
+    margin-top: -40px;
+  }
+
+  .map-container iframe {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
   }
 }

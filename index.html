@@ -9,6 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Fejléc -->
@@ -28,6 +32,12 @@
     <div class="main-content">
       <!-- Egyetlen fő szekció -->
       <section class="main-section">
+        <img
+          id="mobil"
+          src="ring.png"
+          alt="Esküvői kép"
+          style="max-width: 200px; display: none"
+        />
         <p class="section-title">
           Szeretettel várunk 2025. Augusztus 30-án, szombaton <br />a
           Szelcepuszta Turistaházban!
@@ -49,6 +59,7 @@
             required
             placeholder="Név"
             class="input-field"
+            autocomplete="off"
           />
           <select
             name="Visszajelzés"
@@ -77,28 +88,31 @@
               class="input-field"
             />
           </div>
-          <button class="submit-button" type="submit">Küldés</button>
+          <button class="submit-button" type="submit">küldés</button>
         </form>
         <br /><br />
 
+        <!-- Galéria -->
+        <h2 class="sidebar-title">Galéria</h2>
+        <p>blablabla</p>
+
         <div id="galeria">
-          <h2 class="sidebar-title">Galéria</h2>
-          <br />
-          <p>blablabla</p>
-          <br />
-          <img
-            src="kicsi.png"
-            alt="Esküvői kép"
-            class="side-image"
-            style="max-width: 300px"
-          />
+          <img src="1.png" alt="Esküvői kép" class="galeria" />
+          <img src="2.png" alt="Esküvői kép" class="galeria" />
+          <img src="3.png" alt="Esküvői kép" class="galeria" />
+          <img src="4.png" alt="Esküvői kép" class="galeria" />
         </div>
       </section>
 
       <!-- Jobb oldali oldalsáv (program és menü) -->
       <section class="sidebar">
-        <img src="ring.png" alt="Esküvői kép" class="side-image" />
-        <br />
+        <img
+          id="web"
+          src="ring.png"
+          alt="Esküvői kép"
+          class="side-image"
+          style="max-width: 150px; display: block"
+        />
         <div id="program">
           <h2 class="sidebar-title">Program</h2>
           <ul>
@@ -106,14 +120,8 @@
             <li><strong>18:00</strong> - Vacsora</li>
             <li><strong>20:00</strong> - Buli</li>
           </ul>
-          <br />
         </div>
-        <img
-          src="kicsi.png"
-          alt="Esküvői kép"
-          class="side-image"
-          style="max-width: 300px"
-        />
+        <img src="kicsi.png" alt="Esküvői kép" class="side-image" />
         <div id="menu">
           <h3 class="sidebar-title">Menü</h3>
           <ul>
@@ -121,14 +129,8 @@
             <li>Finom kaja</li>
             <li>Setemény</li>
           </ul>
-          <br />
         </div>
-        <img
-          src="kicsi.png"
-          alt="Esküvői kép"
-          class="side-image"
-          style="max-width: 300px"
-        />
+        <img src="kicsi.png" alt="Esküvői kép" class="side-image" />
       </section>
     </div>
 
