@@ -1,4 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Charmonman&family=Lora&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Charmonman&display=swap");
+
+p,
+li {
+  font-family: "Lora", serif;
+  font-size: 1rem;
+}
 
 /* Alap stílusok */
 * {
@@ -9,7 +17,7 @@
 
 html,
 body {
-  font-family: "Charmonman", serif;
+  font-family: "Parisienne", serif;
   background-color: #f4efe9;
   color: #5a5a42;
   width: 100%;
@@ -23,7 +31,7 @@ body {
 /* Fejléc */
 .header {
   position: relative;
-  padding: 10px;
+  padding: 30px;
   text-align: center;
   flex-shrink: 0;
   z-index: 10;
@@ -73,6 +81,11 @@ body {
   margin-bottom: 0;
 }
 
+.section-title {
+  font-size: 1.4rem;
+  font-family: "Lora", serif;
+}
+
 .custom-link {
   color: #394d31;
   font-weight: bold;
@@ -106,6 +119,12 @@ body {
 ul {
   list-style-type: none;
   padding-left: 0;
+}
+
+.sidebar-title {
+  font-size: 2.2rem;
+  font-family: "Parisienne", serif;
+  font-weight: bold;
 }
 
 /* Kép a fő tartalom bal oldalán */

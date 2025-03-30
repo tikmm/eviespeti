@@ -10,23 +10,23 @@
     <!-- Fejléc -->
     <header class="header">
       <h1 class="header-title">Evelin és Péter</h1>
-      <h2 style="font-weight: bold">
+      <p style="font-weight: bold">
         <strong>esküvője</strong>
-      </h2>
+      </p>
     </header>
 
     <!-- Fő tartalom -->
     <div class="main-content">
       <!-- Egyetlen fő szekció -->
       <section class="main-section">
-        <h4 class="section-title">
+        <p class="section-title">
           Szeretettel várunk 2025. Augusztus 30-án, szombaton <br />a
-          Szelecpuszta Turistaházban
-        </h4>
+          Szelecpuszta Turistaházban!
+        </p>
         <br /><br />
 
         <!-- Visszajelzés form -->
-        <p>Kérjük részvételi visszajelzéseteket Április 30-ig</p>
+        <p>Kérjük részvételi visszajelzéseteket Április 30-ig.</p>
         <br />
         <form
           action="https://formspree.io/f/mldjlkvj"
@@ -46,7 +46,9 @@
             id="attendance"
             required
             class="input-field"
-            onchange="document.getElementById('guest-count-container').hidden = this.value !== 'Ott leszek'"
+            onchange="
+            document.getElementById('guest-count-container').hidden = this.value !== 'Ott leszek';
+            document.getElementById('guest-count').required = this.value === 'Ott leszek';"
           >
             <option value="" disabled selected>Válassz</option>
             <option value="Ott leszek">Ott leszek!</option>
@@ -55,7 +57,8 @@
             </option>
           </select>
           <div id="guest-count-container" hidden>
-            <label for="guest-count">Összesen hányan JÖTTÖK? <br /></label>
+            <p>Összesen hányan érkeztek?</p>
+            <label for="guest-count"></label>
             <input
               type="number"
               id="guest-count"
@@ -69,25 +72,30 @@
         </form>
         <br /><br />
 
-        <div hidden>
-          <h2 class="section-title">Galéria</h2>
-          <p>Oszd meg velünk az esküvőn készített képeket!</p>
+        <div>
+          <h2 class="sidebar-title">Galéria</h2>
           <br />
-          <p>-- google drive integráció lesz itt majd --</p>
+          <p>blablabla</p>
+          <br />
+          <img
+            src="kicsi.png"
+            alt="Esküvői kép"
+            class="side-image"
+            style="max-width: 300px"
+          />
         </div>
       </section>
 
       <!-- Jobb oldali oldalsáv (program és menü) -->
       <section class="sidebar">
         <img src="kicsi.png" alt="Esküvői kép" class="side-image" />
-        <h2 class="section-title">Program</h2>
+        <h2 class="sidebar-title">Program</h2>
         <ul>
           <li><strong>15:00</strong> - Szertartás</li>
           <li><strong>18:00</strong> - Vacsora</li>
           <li><strong>20:00</strong> - Buli</li>
         </ul>
-        <br />
-        <h3 class="section-title">Menü</h3>
+        <h3 class="sidebar-title">Menü</h3>
         <ul>
           <li>Hami nyami</li>
           <li>Finom kaja</li>
@@ -99,8 +107,10 @@
 
     <!-- Lábjegyzet / Lábléc -->
     <footer class="footer">
-      <h3>Helyszín :</h3>
+      <h3 class="sidebar-title">Helyszín:</h3>
+      <br />
       <p>Be kell hajtani a tilosba!</p>
+      <br />
       <div class="map-container">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.7481208164704!2d20.605710199999997!3d48.518893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473fa087569e4283%3A0x198eaaf8bde1f6de!2sSzelcepuszta%20Huts%20-%20Hunting%20Lodge!5e0!3m2!1sen!2shu!4v1743024089567!5m2!1sen!2shu"
