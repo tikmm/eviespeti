@@ -409,7 +409,13 @@ select option:disabled {
   }
   .header h1 {
     margin: 20px;
-    font-size: 2.2rem;
+    font-size: 2rem;
+    margin-top: 40px;
+  }
+  .header h2 {
+    margin: 20px;
+    margin-top: -20px;
+    font-size: 1rem;
   }
 
   .main-content {
