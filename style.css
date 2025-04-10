@@ -25,6 +25,7 @@ body {
   font-size: 1.2rem;
   line-height: 1.6;
   list-style-type: none;
+  cursor: default;
 }
 
 p,
@@ -49,6 +50,7 @@ a {
   background-color: #d8cebf;
   width: 100%;
   margin-bottom: 0;
+  cursor: default;
 }
 
 .header::before {
