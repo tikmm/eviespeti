@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evi és Peti ♡</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Fejléc -->
+    <header class="header">
+      <h1 class="header-title">Evelin és Péter</h1>
+      <h2>esküvője</h2>
+      <br />
+      <div class="menu">
+        <a href="#program">Program</a>
+        <a href="#menu">Menü</a>
+        <a href="#helyszin">Helyszín</a>
+        <a href="#galeria">Galéria</a>
+      </div>
+    </header>
+
+    <!-- Fő tartalom -->
+    <div class="main-content">
+      <!-- Egyetlen fő szekció -->
+      <section class="main-section">
+        <img
+          id="mobil"
+          src="ring.png"
+          alt="Esküvői kép"
+          style="max-width: 200px; display: none"
+        />
+        <p class="section-title">
+          Szeretettel várunk 2025. Augusztus 30-án, szombaton <br />a
+          Szelcepuszta Turistaházban!
+        </p>
+        <br /><br />
+
+        <!-- Visszajelzés form -->
+        <p>Kérjük részvételi visszajelzéseteket Április 30-ig.</p>
+        <br />
+        <form
+          action="https://formspree.io/f/mldjlkvj"
+          method="POST"
+          class="feedback-form"
+        >
+          <input
+            type="text"
+            id="name"
+            name="Név"
+            required
+            placeholder="Név"
+            class="input-field"
+            autocomplete="off"
+          />
+          <select
+            name="Visszajelzés"
+            id="attendance"
+            required
+            class="input-field"
+            onchange="
+            document.getElementById('guest-count-container').hidden = this.value !== 'Ott leszek';
+            document.getElementById('guest-count').required = this.value === 'Ott leszek';"
+          >
+            <option value="" disabled selected>Válassz</option>
+            <option value="Ott leszek">Ott leszek!</option>
+            <option value="Nem tudok ott lenni">
+              Sajnos nem tudok ott lenni 😔
+            </option>
+          </select>
+          <div id="guest-count-container" hidden>
+            <p><br />Összesen hányan érkeztek?</p>
+            <label for="guest-count"></label>
+            <input
+              type="number"
+              id="guest-count"
+              name="Vendégek száma"
+              min="1"
+              max="6"
+              class="input-field2"
+            />
+          </div>
+          <button class="submit-button" type="submit">küldés</button>
+        </form>
+        <br /><br />
+
+        <!-- Galéria -->
+        <h2 class="sidebar-title" id="galeria">Galéria</h2>
+        <p>Vadházasságunk pillanatai</p>
+
+        <div id="gal">
+          <img src="kicsi.png" alt="Esküvői kép" class="galeria" />
+          <img src="3.png" alt="Esküvői kép" class="galeria" />
+          <img src="4.png" alt="Esküvői kép" class="galeria" />
+          <img src="1.png" alt="Esküvői kép" class="galeria" />
+        </div>
+      </section>
+
+      <!-- Jobb oldali oldalsáv (program és menü) -->
+      <section class="sidebar">
+        <img
+          id="web"
+          src="ring.png"
+          alt="Esküvői kép"
+          class="web-image"
+          style="max-width: 150px; display: block"
+        />
+        <div id="program">
+          <h2 class="sidebar-title">Program</h2>
+          <ul>
+            <li>Vendégvárás <strong>15:00</strong>-tól</li>
+            <br />
+            <li>Részletek hamarosan!</li>
+          </ul>
+        </div>
+        <img src="2.png" alt="Esküvői kép" class="side-image" />
+        <div id="menu">
+          <h3 class="sidebar-title">Menü</h3>
+          <ul>
+            <li>Hami nyami</li>
+            <li>Finom kaja</li>
+            <li>Setemény</li>
+            <br />
+            <li>Részletek hamarosan... :)</li>
+          </ul>
+        </div>
+        <img src="kicsi.png" alt="Esküvői kép" class="side-image" />
+      </section>
+    </div>
+
+    <!-- Lábjegyzet / Lábléc -->
+    <footer class="footer" id="helyszin">
+      <h3 class="sidebar-title">Helyszín:</h3>
+      <p>
+        Sajóbábonyból indulva haladj a 26-os főúton Sajószentpéter irányába,
+        majd térj át jobbra a 27-es főútra Edelény felé. <br />Edelényből
+        Szendrőn át folytasd az utat Szalonna irányába, majd Perkupán áthaladva
+        tarts balra, és érkezz meg Szin településre. <br />Szinből haladj tovább
+        Szinpetri felé, de a két település között figyelj, mert a táblával
+        jelzett mellékúton le kell kanyarodnod jobbra. <br /><br /><strong
+          >A mellékúton garantáltan két behajtani tilos tábla és egy sorompó is
+          próbál majd elbizonytalanítani. <br />Ne dőlj be nekik, nem rád
+          vonatkoznak!</strong
+        ><br /><br />
+        Nyugodtan hajts tovább, a sorompó is csak dísznek van ott.
+        <br />Kövesd az utat, és hamarosan megérkezel Szelcepuszta
+        turistaházhoz, ahol már csak az lesz a dolgod, hogy élvezd a helyet!
+      </p>
+      <br />
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2642.7481208164704!2d20.605710199999997!3d48.518893!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473fa087569e4283%3A0x198eaaf8bde1f6de!2sSzelcepuszta%20Huts%20-%20Hunting%20Lodge!5e0!3m2!1sen!2shu!4v1743024089567!5m2!1sen!2shu"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <img src="helyszin.png" alt="heylszin" class="footer-image" />
+    </footer>
+  </body>
+</html>
