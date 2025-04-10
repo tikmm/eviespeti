@@ -163,6 +163,18 @@ a {
   transform: scaleX(1);
 }
 
+.ty-image {
+  width: 100%; /* A kép szélessége legyen 100% */
+  height: 100vh; /* A kép magassága legyen 100% a néző ablakának magasságához */
+  overflow: hidden; /* Ha a kép nem illeszkedik tökéletesen, ne legyen görgetés */
+}
+
+.ty-image img {
+  width: 100%; /* A kép szélessége 100% */
+  height: 100%; /* A kép magassága 100% */
+  object-fit: cover; /* A kép kitölti a teret anélkül, hogy torzulna */
+}
+
 /* Fő tartalom */
 .main-content {
   display: flex;
