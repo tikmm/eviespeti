@@ -230,7 +230,8 @@ a {
   line-height: 1.6;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 60px; 
   align-items: center;
 }
 
@@ -260,12 +261,15 @@ a {
   max-width: 100%;
   height: auto;
   align-self: center;
+  margin-bottom: 100px;
 }
 
 .web-image {
   max-width: 100%;
   height: auto;
   align-self: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 /* Visszajelzés */
