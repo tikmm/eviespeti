@@ -260,26 +260,28 @@ a {
   font-weight: 200; 
   padding-bottom: 10px;
   display: inline-block; 
-  font-size: 1.1em;
+  font-size: 2.3em;
   position: relative;
-  font-family: "Merriweather", serif;
-  background: rgba(104, 104, 95, 0.1);
+  font-family: "Tangerine", serif;
+/*   background: rgba(104, 104, 95, 0.1);
   padding: 5px 10px 10px 10px;
-  border-radius: 5px;
-  margin-bottom: 15px;
-  text-shadow: 0.15px 0 currentColor;
+  border-radius: 5px; */
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
 }
 
 .underline {
   display: inline-block; 
   position: relative;
+  font-size: 1.1em;
   border-bottom: 1px solid rgba(104, 104, 95, 0.5);
-  padding-bottom: 2px;
-  text-shadow: 0.1px 0 currentColor;
+  color: #5f5f51;
+  margin-bottom: 12px;
+  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.15);
 }
 
 .underline:hover {
-  border-bottom-color:rgba(29, 29, 27, 0.5);
+  border-bottom-color:#4d4d40;
   transition: border-color 0.3s ease;
 }
 
