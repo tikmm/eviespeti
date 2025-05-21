@@ -270,11 +270,11 @@ a {
 .underline {
   display: inline-block; 
   position: relative;
-  font-size: 1.1em;
+  font-size: 1em;
   border-bottom: 1px solid rgba(104, 104, 95, 0.5);
   color: #626256;
   margin-bottom: 12px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+  text-shadow: 0.4px 0.4px 0.5px rgba(0, 0, 0, 0.15);
 }
 
 .underline:hover {
