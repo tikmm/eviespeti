@@ -262,7 +262,7 @@ a {
   display: inline-block; 
   font-size: 2.3em;
   position: relative;
-  font-family: "Tangerine", serif;
+  font-family: "Tangerine", cursive;
   margin-bottom: 10px;
   text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.15);
 }
@@ -272,9 +272,9 @@ a {
   position: relative;
   font-size: 1.1em;
   border-bottom: 1px solid rgba(104, 104, 95, 0.5);
-  color: #5f5f51;
+  color: #626256;
   margin-bottom: 12px;
-  text-shadow: 0.5px 0.5px 0.5px rgba(0, 0, 0, 0.15);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
 }
 
 .underline:hover {
