@@ -42,61 +42,76 @@
           Szeretettel várunk 2025. Augusztus 30-án, szombaton <br />a
           Szelcepuszta Turistaházban!
         </p>
-        <br /><br />
+        <br />
 
         <!-- Visszajelzés form -->
-        <p>Kérjük részvételi visszajelzéseteket Április 30-ig.</p>
-        <br />
-        <form
-          action="https://formspree.io/f/mldjlkvj"
-          method="POST"
-          class="feedback-form"
-        >
-          <input
-            type="text"
-            id="name"
-            name="Név"
-            required
-            placeholder="Név"
-            class="input-field"
-            autocomplete="off"
-          />
-          <select
-            name="Visszajelzés"
-            id="attendance"
-            required
-            class="input-field"
-            onchange="
+        <div hidden>
+          <h2 class="sidebar-title">Visszajelzés</h2>
+          <p>Kérjük részvételi visszajelzéseteket Április 30-ig.</p>
+          <br />
+          <form
+            action="https://formspree.io/f/mldjlkvj"
+            method="POST"
+            class="feedback-form"
+          >
+            <input
+              type="text"
+              id="name"
+              name="Név"
+              required
+              placeholder="Név"
+              class="input-field"
+              autocomplete="off"
+            />
+            <select
+              name="Visszajelzés"
+              id="attendance"
+              required
+              class="input-field"
+              onchange="
             document.getElementById('guest-count-container').hidden = this.value !== 'Ott leszek';
             document.getElementById('guest-count').required = this.value === 'Ott leszek';"
-          >
-            <option value="" disabled selected>Válassz</option>
-            <option value="Ott leszek">Ott leszek!</option>
-            <option value="Nem tudok ott lenni">
-              Sajnos nem tudok ott lenni 😔
-            </option>
-          </select>
-          <div id="guest-count-container" hidden>
-            <p><br />Összesen hányan érkeztek?</p>
-            <label for="guest-count"></label>
-            <input
-              type="number"
-              id="guest-count"
-              name="Vendégek száma"
-              min="1"
-              max="6"
-              class="input-field2"
-            />
-          </div>
-          <button class="submit-button" type="submit">küldés</button>
-        </form>
-        <br /><br />
+            >
+              <option value="" disabled selected>Válassz</option>
+              <option value="Ott leszek">Ott leszek!</option>
+              <option value="Nem tudok ott lenni">
+                Sajnos nem tudok ott lenni 😔
+              </option>
+            </select>
+            <div id="guest-count-container" hidden>
+              <p><br />Összesen hányan érkeztek?</p>
+              <label for="guest-count"></label>
+              <input
+                type="number"
+                id="guest-count"
+                name="Vendégek száma"
+                min="1"
+                max="6"
+                class="input-field2"
+              />
+            </div>
+            <button class="submit-button" type="submit">küldés</button>
+          </form>
+        </div>
 
         <!-- Galéria -->
         <h2 class="sidebar-title" id="galeria">Galéria</h2>
-        <p>Vadházasságunk pillanatai</p>
+        <!-- <p>Vadházasságunk pillanatai</p> -->
+        <p>Töltsd fel az esküvőn készített képeid!</p>
 
         <div id="gal">
+          <a
+            href="https://drive.google.com/drive/folders/11gdCCF9WuSG9DweDX-PPrWIUz7SqE_XS"
+            target="_blank"
+          >
+            <img
+              src="+.png"
+              alt="Esküvői kép"
+              class="galeria"
+              style="border: 1px solid rgba(0, 0, 0, 0.15)"
+              href=""
+            />
+          </a>
           <img src="kicsi.png" alt="Esküvői kép" class="galeria" />
           <img src="3.png" alt="Esküvői kép" class="galeria" />
           <img src="4.png" alt="Esküvői kép" class="galeria" />
